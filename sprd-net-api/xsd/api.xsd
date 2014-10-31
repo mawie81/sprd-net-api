@@ -1,0 +1,2963 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.0" targetNamespace="http://api.spreadshirt.net">
+    <xs:import schemaLocation="xlink.xsd" namespace="http://www.w3.org/1999/xlink"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="abstractList" type="tns:abstractList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="address" type="tns:addressDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="addressBookAddress" type="tns:addressBookAddressDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="addressBookAddresses" type="tns:addressBookAddressDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="appearance" type="tns:productTypeAppearanceDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="appearanceColor" type="tns:productTypeAppearanceColorDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="application" type="tns:applicationDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="applications" type="tns:applicationDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="article" type="tns:articleDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="articleCategories" type="tns:articleCategoryDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="articleCategory" type="tns:articleCategoryDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="articleReferences" type="tns:articleReferencesDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="articles" type="tns:articleDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="attribute" type="tns:productTypeAttributeDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="autoMarkQueue" type="tns:autoMarkQueueDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="basket" type="tns:basketDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="basketItem" type="tns:basketItemDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="basketItems" type="tns:basketItemDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="checkout" type="tns:checkoutFinalizationDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="clientSettings" type="tns:clientSettingsDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="combinedBasket" type="tns:combinedBasketDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="configuration" type="tns:configurationDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="configurationLastModified" type="tns:configurationLastModifiedDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="configurationRenderData" type="tns:configurationRenderDataDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="countries" type="tns:countryDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="country" type="tns:countryDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="currencies" type="tns:currencyDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="currency" type="tns:currencyDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="defaultColor" type="tns:designColorDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="delivery" type="tns:deliveryDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="design" type="tns:designDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="designCategories" type="tns:designCategoryDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="designCategory" type="tns:designCategoryDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="designLastModified" type="tns:designLastModifiedDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="designRenderData" type="tns:designRenderDataDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="designs" type="tns:designDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="dimension" type="tns:dimension"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="discount" type="tns:discountDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="discountScale" type="tns:discountScaleDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="discountScales" type="tns:discountScaleDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="empty" type="tns:emptyDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="facet" type="tns:facetDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="font" type="tns:fontDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="fontFamilies" type="tns:fontFamilyDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="fontFamily" type="tns:fontFamilyDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="fulfiller" type="tns:fulfillerDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="fulfillers" type="tns:fulfillerDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="historyEntry" type="tns:transactionHistoryEntryDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="image" type="tns:image"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="item" type="tns:autoMarkQueueItemDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="language" type="tns:languageDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="languages" type="tns:languageDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="length" type="tns:length"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="link" type="tns:linkDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="locale" type="tns:localeDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="locales" type="tns:localeDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="measure" type="tns:productTypeSizeMeasureDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="message" type="tns:messageDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="newsletter" type="tns:userNewsletterDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="optionCost" type="tns:optionCostDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="order" type="tns:orderDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="orderAdjustment" type="tns:orderAdjustmentDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="orderAdjustments" type="tns:orderAdjustmentDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="orderItem" type="tns:orderItemDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="orderItemAdjustment" type="tns:orderItemAdjustmentDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="orderItems" type="tns:orderItemDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="orders" type="tns:orderDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="packagingMeasure" type="tns:productTypePackagingMeasureDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="packagingMeasures" type="tns:productTypePackagingMeasureDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="path" type="tns:path"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="paymentType" type="tns:paymentTypeDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="paymentTypes" type="tns:paymentTypeDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="point" type="tns:point"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="price" type="tns:elementPrice"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="priceRange" type="tns:priceRange"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="printArea" type="tns:printAreaDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="printColor" type="tns:printColorDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="printColors" type="tns:printColorDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="printType" type="tns:printTypeDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="printTypes" type="tns:printTypeDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="product" type="tns:productDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="productLastModified" type="tns:productLastModifiedDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="productRenderData" type="tns:productRenderDataDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="productType" type="tns:productTypeDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="productTypeCategory" type="tns:productTypeCategoryDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="productTypeDepartment" type="tns:productTypeDepartmentDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="productTypeDepartments" type="tns:productTypeDepartmentDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="productTypes" type="tns:productTypeDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="products" type="tns:productDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="property" type="tns:messagePropertyDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="rect" type="tns:rect"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="reference" type="tns:reference"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="references" type="tns:referenceList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="relatedContent" type="tns:relatedContentDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="relatedSearch" type="tns:relatedSearchDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="relatedSearchGroup" type="tns:relatedSearchGroupDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="relatedSearches" type="tns:relatedSearchesDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="request" type="tns:request"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="resource" type="tns:resource"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="response" type="tns:response"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="shape" type="tns:shape"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="shippingCost" type="tns:shippingCostDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="shippingCountries" type="tns:shippingCountryDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="shippingCountry" type="tns:shippingCountryDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="shippingOption" type="tns:shippingOptionDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="shippingOptions" type="tns:shippingOptionDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="shippingRegion" type="tns:shippingRegionDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="shippingState" type="tns:shippingStateDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="shippingType" type="tns:shippingTypeDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="shippingTypes" type="tns:shippingTypeDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="shop" type="tns:shopDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="shopAddress" type="tns:shopAddressDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="shops" type="tns:shopDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="size" type="tns:productTypeSizeDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="stock" type="tns:productTypeStockDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="stockState" type="tns:productTypeStockStateDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="stockStates" type="tns:productTypeStockStateDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="stocks" type="tns:productTypeStockDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="svg" type="tns:svg"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="text" type="tns:text"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="transaction" type="tns:transactionDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="tspan" type="tns:tspan"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="user" type="tns:userDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="view" type="tns:productTypeViewDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="viewMap" type="tns:productTypeViewMapDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="washingInstruction" type="tns:productTypeWashingInstructionDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="label" type="tns:labelDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="labelType" type="tns:labelTypeDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="labelTypes" type="tns:labelTypeDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="labeledObject" type="tns:labeledObjectDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="labeledObjects" type="tns:labeledObjectDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="labels" type="tns:labelDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="objectLabel" type="tns:objectLabelDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="objectLabels" type="tns:objectLabelDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="objectType" type="tns:objectTypeDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="objectTypes" type="tns:objectTypeDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="apiFeature" type="tns:apiFeatureDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="apiFeatures" type="tns:apiFeatureDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="apiKey" type="tns:apiKeyDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="apiKeys" type="tns:apiKeyDTOList"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="identity" type="tns:identityDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="login" type="tns:loginDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="session" type="tns:sessionDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="registration" type="tns:registrationDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="registrationResult" type="tns:registrationResultDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="batch" type="tns:batchDTO"/>
+    <xs:element xmlns:tns="http://api.spreadshirt.net" name="operation" type="tns:operationDTO"/>
+    <xs:complexType name="reference">
+        <xs:sequence/>
+        <xs:attribute xmlns:xlink="http://www.w3.org/1999/xlink" ref="xlink:href"/>
+        <xs:attribute name="id" type="xs:string"/>
+        <xs:attribute name="label" type="xs:string"/>
+        <xs:attribute name="status" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="localeDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="isoCode" minOccurs="0" type="xs:string"/>
+                    <xs:element name="language" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="country" minOccurs="0" type="tns:reference"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="dto">
+        <xs:sequence>
+            <xs:element name="created" minOccurs="0" type="xs:dateTime"/>
+            <xs:element name="modified" minOccurs="0" type="xs:dateTime"/>
+        </xs:sequence>
+        <xs:attribute xmlns:xlink="http://www.w3.org/1999/xlink" ref="xlink:href"/>
+        <xs:attribute name="id" type="xs:string"/>
+        <xs:attribute name="lifeCycleState" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="orderItemDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="baseOrderItem" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="shop" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="origin" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="element" minOccurs="0" type="tns:elementDTO"/>
+                    <xs:element name="correlation" minOccurs="0" type="tns:correlationOrderItemDTO"/>
+                    <xs:element name="fulfillmentState" minOccurs="0" type="tns:fulfillmentState"/>
+                    <xs:element name="quantity" minOccurs="0" type="xs:int"/>
+                    <xs:element name="price" minOccurs="0" type="tns:price"/>
+                    <xs:element name="attachments" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="attachment" maxOccurs="unbounded" type="tns:attachmentDTO"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="shipping" minOccurs="0" type="tns:shippingTrackingDTO"/>
+                    <xs:element ref="tns:transaction" minOccurs="0"/>
+                    <xs:element name="couponReduction" minOccurs="0" type="tns:price"/>
+                    <xs:element name="discountGross" minOccurs="0" type="tns:price"/>
+                    <xs:element name="goodwill" minOccurs="0" type="tns:price"/>
+                    <xs:element name="commissionsTotal" minOccurs="0" type="tns:price"/>
+                    <xs:element name="businessUnit" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="elementDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="properties" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="property" maxOccurs="unbounded" type="tns:elementPropertyDTO"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="type" use="required" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="elementPropertyDTO">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="key" use="required" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="correlationOrderItemDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="partner" minOccurs="0" type="tns:correlationPartnerOrderItemDTO"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="correlationPartnerOrderItemDTO">
+        <xs:sequence>
+            <xs:element name="orderItemId" minOccurs="0" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="price">
+        <xs:sequence>
+            <xs:element name="vatExcluded" minOccurs="0" type="xs:decimal"/>
+            <xs:element name="vatIncluded" minOccurs="0" type="xs:decimal"/>
+            <xs:element name="display" minOccurs="0" type="xs:decimal"/>
+            <xs:element name="vat" minOccurs="0" type="xs:decimal"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="currency" minOccurs="0" type="tns:reference"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="attachmentDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element ref="tns:product" minOccurs="0"/>
+                    <xs:element ref="tns:reference" minOccurs="0"/>
+                </xs:sequence>
+                <xs:attribute name="type" use="required" type="tns:attachmentType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="productDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="user" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="token" minOccurs="0" type="xs:string"/>
+                    <xs:element name="creator" minOccurs="0" type="xs:string"/>
+                    <xs:element ref="tns:productType"/>
+                    <xs:element name="appearance" type="tns:reference"/>
+                    <xs:element name="restrictions" minOccurs="0" type="tns:productRestrictionsDTO"/>
+                    <xs:element name="labels" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="label" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="configurations" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:configuration" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="defaultValues" minOccurs="0" type="tns:productDefaultValuesDTO"/>
+                    <xs:element name="resources" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:resource" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="imageModified" minOccurs="0" type="xs:dateTime"/>
+                </xs:sequence>
+                <xs:attribute name="weight" type="xs:double"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="productTypeDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="shortDescription" minOccurs="0" type="xs:string"/>
+                    <xs:element name="description" minOccurs="0" type="xs:string"/>
+                    <xs:element name="categoryName" minOccurs="0" type="xs:string"/>
+                    <xs:element name="brand" minOccurs="0" type="xs:string"/>
+                    <xs:element name="shippingFactor" minOccurs="0" type="xs:double"/>
+                    <xs:element name="sizeFitHint" minOccurs="0" type="xs:string"/>
+                    <xs:element name="discountSupported" minOccurs="0" type="xs:boolean"/>
+                    <xs:element name="separatePrintouts" minOccurs="0" type="xs:boolean"/>
+                    <xs:element name="customsTariffCode" minOccurs="0" type="xs:string"/>
+                    <xs:element name="manufacturingCountry" minOccurs="0" type="tns:reference"/>
+                    <xs:element ref="tns:price" minOccurs="0"/>
+                    <xs:element name="defaultValues" minOccurs="0" type="tns:productTypeDefaultValuesDTO"/>
+                    <xs:element name="labels" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="label" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="appearances" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:appearance" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="sizes" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:size" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="attributes" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:attribute" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="washingInstructions" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:washingInstruction" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="views" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:view" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="printAreas" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:printArea" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="stockStates" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:stockState" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="resources" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:resource" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="giftWrappingSupported" minOccurs="0" type="xs:boolean"/>
+                </xs:sequence>
+                <xs:attribute name="weight" type="xs:double"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="elementPrice">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:price">
+                <xs:sequence>
+                    <xs:element name="items" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="item" maxOccurs="unbounded" minOccurs="0" type="tns:priceItem"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="priceItem">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="price" minOccurs="0" type="tns:price"/>
+            <xs:element name="items" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" name="item" maxOccurs="unbounded" minOccurs="0" type="tns:priceItem"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="type" type="xs:string"/>
+        <xs:attribute name="id" type="xs:string"/>
+        <xs:attribute name="index" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="productTypeDefaultValuesDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="defaultView" type="tns:reference"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="defaultAppearance" type="tns:reference"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="productTypeAppearanceDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="colors" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="color" maxOccurs="unbounded" minOccurs="0" type="tns:productTypeAppearanceColorDTO"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="printTypes" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="printType" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="restrictions" type="tns:productTypeAppearanceRestrictionsDTO"/>
+                    <xs:element name="resources" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:resource" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="productTypeAppearanceColorDTO">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="index" use="required" type="xs:int"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="productTypeAppearanceRestrictionsDTO">
+        <xs:sequence>
+            <xs:element name="useUnderlay" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="resource">
+        <xs:sequence/>
+        <xs:attribute name="mediaType" type="xs:string"/>
+        <xs:attribute xmlns:tns="http://api.spreadshirt.net" name="type" type="tns:resourceType"/>
+        <xs:attribute xmlns:xlink="http://www.w3.org/1999/xlink" ref="xlink:href"/>
+    </xs:complexType>
+    <xs:complexType name="productTypeSizeDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="measures" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:measure" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="productTypeSizeMeasureDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="value" type="tns:sizeDTO"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="sizeDTO">
+        <xs:simpleContent>
+            <xs:extension base="xs:int">
+                <xs:attribute xmlns:tns="http://api.spreadshirt.net" name="unit" use="required" type="tns:unit"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="productTypeAttributeDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="key" type="xs:string"/>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="description" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="productTypeWashingInstructionDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="logo" type="xs:string"/>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="description" minOccurs="0" type="xs:string"/>
+                    <xs:element name="type" type="tns:washingInstructionType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="productTypeViewDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="size" type="tns:dimension"/>
+                    <xs:element name="perspective" minOccurs="0" type="tns:perspective"/>
+                    <xs:element name="montage" minOccurs="0" type="tns:productTypeViewMontageDTO"/>
+                    <xs:element name="viewMaps" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:viewMap" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="resources" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:resource" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="dimension">
+        <xs:sequence>
+            <xs:element name="width" type="xs:double"/>
+            <xs:element name="height" type="xs:double"/>
+        </xs:sequence>
+        <xs:attribute xmlns:tns="http://api.spreadshirt.net" name="unit" type="tns:unit"/>
+    </xs:complexType>
+    <xs:complexType name="productTypeViewMontageDTO">
+        <xs:sequence>
+            <xs:element name="backgroundImage" minOccurs="0" type="xs:boolean"/>
+            <xs:element name="foregroundImage" minOccurs="0" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="productTypeViewMapDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="transformations" minOccurs="0" type="tns:transformationDTO"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="printAreaClippingShape" minOccurs="0" type="tns:shapeDTO"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="printArea" minOccurs="0" type="tns:reference"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="offset" minOccurs="0" type="tns:point"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="shapeDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="content" type="tns:shapeContentDTO"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="shapeContentDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:svg"/>
+        </xs:sequence>
+        <xs:attribute xmlns:tns="http://api.spreadshirt.net" name="unit" type="tns:unit"/>
+    </xs:complexType>
+    <xs:complexType name="svg">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:path" minOccurs="0"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:rect" minOccurs="0"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:image" minOccurs="0"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:text" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="version" type="xs:string"/>
+        <xs:attribute name="viewBox" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="path">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:shape">
+                <xs:sequence/>
+                <xs:attribute name="d" type="xs:string"/>
+                <xs:attribute name="id" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType abstract="true" name="shape">
+        <xs:sequence/>
+        <xs:attribute name="x" type="xs:string"/>
+        <xs:attribute name="y" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="rect">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:shape">
+                <xs:sequence/>
+                <xs:attribute name="width" type="xs:string"/>
+                <xs:attribute name="height" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="image">
+        <xs:sequence/>
+        <xs:attribute name="designId" type="xs:string"/>
+        <xs:attribute name="printColorIds" type="xs:string"/>
+        <xs:attribute name="printColorRGBs" type="xs:string"/>
+        <xs:attribute name="x" type="xs:string"/>
+        <xs:attribute name="y" type="xs:string"/>
+        <xs:attribute name="width" type="xs:string"/>
+        <xs:attribute name="height" type="xs:string"/>
+        <xs:attribute name="transform" type="xs:string"/>
+        <xs:attribute xmlns:xlink="http://www.w3.org/1999/xlink" ref="xlink:href"/>
+    </xs:complexType>
+    <xs:complexType name="text">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:tspan">
+                <xs:sequence/>
+                <xs:attribute name="width" type="xs:string"/>
+                <xs:attribute name="height" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType mixed="true" name="tspan">
+        <xs:sequence>
+            <xs:choice maxOccurs="unbounded" minOccurs="0">
+                <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:tspan"/>
+                <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:text"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="fontFamilyId" type="xs:string"/>
+        <xs:attribute name="fontId" type="xs:string"/>
+        <xs:attribute name="printColorId" type="xs:string"/>
+        <xs:attribute name="x" type="xs:string"/>
+        <xs:attribute name="y" type="xs:string"/>
+        <xs:attribute name="text-anchor" type="xs:string"/>
+        <xs:attribute name="lineWidth" type="xs:string"/>
+        <xs:attribute name="fill" type="xs:string"/>
+        <xs:attribute name="font-family" type="xs:string"/>
+        <xs:attribute name="font-weight" type="xs:string"/>
+        <xs:attribute name="font-size" type="xs:string"/>
+        <xs:attribute name="font-style" type="xs:string"/>
+        <xs:attribute name="transform" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="point">
+        <xs:sequence>
+            <xs:element name="x" type="xs:double"/>
+            <xs:element name="y" type="xs:double"/>
+        </xs:sequence>
+        <xs:attribute xmlns:tns="http://api.spreadshirt.net" name="unit" type="tns:unit"/>
+    </xs:complexType>
+    <xs:complexType name="printAreaDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="appearanceColorIndex" type="xs:int"/>
+                    <xs:element name="defaultView" type="tns:reference"/>
+                    <xs:element name="restrictions" type="tns:printAreaRestrictionsDTO"/>
+                    <xs:element name="boundary" type="tns:printAreaBoundaryDTO"/>
+                    <xs:element name="defaultPositioningBox" minOccurs="0" type="tns:defaultPositioningBoxDTO"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="printAreaRestrictionsDTO">
+        <xs:sequence>
+            <xs:element name="textAllowed" type="xs:boolean"/>
+            <xs:element name="designAllowed" type="xs:boolean"/>
+            <xs:element name="excludedPrintTypes" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" name="excludedPrintType" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="printAreaBoundaryDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="size" type="tns:dimension"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="hard" minOccurs="0" type="tns:shapeDTO"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="soft" minOccurs="0" type="tns:shapeDTO"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="defaultPositioningBoxDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="content" type="tns:shapeContentDTO"/>
+            <xs:element name="horizontalAlignment" type="xs:string"/>
+            <xs:element name="verticalAlignment" type="xs:string"/>
+            <xs:element name="canRotate" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="productTypeStockStateDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="appearance" minOccurs="0" type="tns:reference"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="size" minOccurs="0" type="tns:reference"/>
+            <xs:element name="available" minOccurs="0" type="xs:boolean"/>
+            <xs:element name="quantity" minOccurs="0" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="productRestrictionsDTO">
+        <xs:sequence>
+            <xs:element name="customizable" minOccurs="0" type="xs:boolean"/>
+            <xs:element name="freeColorSelection" type="xs:boolean"/>
+            <xs:element name="example" type="xs:boolean"/>
+            <xs:element name="softBoundarySupported" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="configurationDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="printArea" type="tns:reference"/>
+                    <xs:element name="printType" type="tns:reference"/>
+                    <xs:element name="offset" type="tns:point"/>
+                    <xs:element name="content" type="tns:configurationContentDTO"/>
+                    <xs:element name="fontFamilies" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="fontFamily" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="designs" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="design" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="restrictions" minOccurs="0" type="tns:configurationRestrictionsDTO"/>
+                    <xs:element name="resources" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:resource" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="type" use="required" type="tns:configurationType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="configurationContentDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:svg"/>
+        </xs:sequence>
+        <xs:attribute xmlns:tns="http://api.spreadshirt.net" name="unit" type="tns:unit"/>
+        <xs:attribute name="dpi" use="required" type="xs:double"/>
+    </xs:complexType>
+    <xs:complexType name="configurationRestrictionsDTO">
+        <xs:sequence>
+            <xs:element name="changeable" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="productDefaultValuesDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="defaultView" minOccurs="0" type="tns:reference"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="defaultDesign" minOccurs="0" type="tns:reference"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="shippingTrackingDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="parcelDelivery" minOccurs="0" type="tns:reference"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="transactionDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="baseTransactionId" minOccurs="0" type="xs:string"/>
+                    <xs:element ref="tns:shippingType" minOccurs="0"/>
+                    <xs:element ref="tns:fulfiller" minOccurs="0"/>
+                    <xs:element name="executionId" minOccurs="0" type="xs:string"/>
+                    <xs:element name="fulfillmentState" minOccurs="0" type="xs:string"/>
+                    <xs:element name="dateDelivery" minOccurs="0" type="xs:dateTime"/>
+                    <xs:element name="history" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:historyEntry" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="shippingTypeDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="description" minOccurs="0" type="xs:string"/>
+                    <xs:element name="trackingLink" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="shippingProviderId" minOccurs="0" type="xs:string"/>
+                    <xs:element name="shippingCountries" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:shippingCountry" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="shippingRegions" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:shippingRegion" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="weight" type="xs:double"/>
+                <xs:attribute name="isExpress" type="xs:boolean"/>
+                <xs:attribute name="phoneNumberRequired" type="xs:boolean"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="shippingCountryDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="isoCode" minOccurs="0" type="xs:string"/>
+                    <xs:element name="shippingRegion" type="tns:reference"/>
+                    <xs:element name="shippingSupported" type="xs:boolean"/>
+                    <xs:element name="externalFulfillmentSupported" type="xs:boolean"/>
+                    <xs:element name="trackingLink" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="shippingStates" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:shippingState" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="shippingStateDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="isoCode" minOccurs="0" type="xs:string"/>
+                    <xs:element name="shippingRegion" type="tns:reference"/>
+                    <xs:element name="shippingSupported" type="xs:boolean"/>
+                    <xs:element name="externalFulfillmentSupported" type="xs:boolean"/>
+                    <xs:element name="trackingLink" minOccurs="0" type="tns:reference"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="shippingRegionDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="shippingCosts" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:shippingCost" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="shippingCostDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="orderValueRange" type="tns:priceRange"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="cost" type="tns:elementPrice"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="priceRange">
+        <xs:sequence>
+            <xs:element name="from" type="xs:decimal"/>
+            <xs:element name="to" minOccurs="0" type="xs:decimal"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="currency" minOccurs="0" type="tns:reference"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="fulfillerDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element ref="tns:country" minOccurs="0"/>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="countryDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="isoCode" type="xs:string"/>
+                    <xs:element name="thousandsSeparator" type="xs:string"/>
+                    <xs:element name="decimalPoint" type="xs:string"/>
+                    <xs:element ref="tns:length"/>
+                    <xs:element name="currency" type="tns:reference"/>
+                    <xs:element name="currencyPattern" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="length">
+        <xs:sequence>
+            <xs:element name="unit" type="xs:string"/>
+            <xs:element name="unitFactor" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="transactionHistoryEntryDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="actor" minOccurs="0" type="xs:string"/>
+                    <xs:element name="action" minOccurs="0" type="xs:string"/>
+                    <xs:element name="fulfillmentState" minOccurs="0" type="tns:fulfillmentState"/>
+                    <xs:element ref="tns:fulfiller" minOccurs="0"/>
+                    <xs:element name="comment" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="printTypeDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="description" minOccurs="0" type="xs:string"/>
+                    <xs:element name="deliveryPeriod" minOccurs="0" type="xs:string"/>
+                    <xs:element name="size" type="tns:dimension"/>
+                    <xs:element name="dpi" type="xs:double"/>
+                    <xs:element name="colors" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="color" maxOccurs="unbounded" minOccurs="0" type="tns:printColorDTO"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="restrictions" type="tns:printTypeRestrictionsDTO"/>
+                    <xs:element ref="tns:price" minOccurs="0"/>
+                </xs:sequence>
+                <xs:attribute name="weight" type="xs:double"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="printColorDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="fill" type="xs:string"/>
+                    <xs:element ref="tns:price" minOccurs="0"/>
+                    <xs:element name="restrictions" type="tns:printColorRestrictionsDTO"/>
+                    <xs:element name="resources" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:resource" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="weight" use="required" type="xs:double"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="printColorRestrictionsDTO">
+        <xs:sequence>
+            <xs:element name="simplifiedFill" type="xs:boolean"/>
+            <xs:element name="printableAbovePrintColors" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" name="printableAbovePrintColor" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="printTypeRestrictionsDTO">
+        <xs:sequence>
+            <xs:element name="colorSpace" minOccurs="0" type="xs:string"/>
+            <xs:element name="whiteSupported" type="xs:boolean"/>
+            <xs:element name="transparencySupported" type="xs:boolean"/>
+            <xs:element name="scaleability" minOccurs="0" type="xs:string"/>
+            <xs:element name="printableAlongWithPrintTypes" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" name="printableAlongWithPrintType" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="printableAbovePrintTypes" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" name="printableAbovePrintType" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="maxPrintColorLayers" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="relatedSearchesDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:relatedSearch" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType abstract="true" name="abstractList">
+        <xs:sequence>
+            <xs:element name="facets" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:facet" maxOccurs="unbounded" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute xmlns:xlink="http://www.w3.org/1999/xlink" ref="xlink:href"/>
+        <xs:attribute name="offset" type="xs:long"/>
+        <xs:attribute name="limit" type="xs:long"/>
+        <xs:attribute name="count" type="xs:long"/>
+        <xs:attribute name="sortField" type="xs:string"/>
+        <xs:attribute name="sortOrder" type="xs:string"/>
+        <xs:attribute name="query" type="xs:string"/>
+        <xs:attribute name="suggestedQuery" type="xs:string"/>
+        <xs:attribute name="executedQuery" type="xs:string"/>
+        <xs:attribute name="ungroupedCount" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="relatedSearchDTO">
+        <xs:sequence>
+            <xs:element name="label" minOccurs="0" type="xs:string"/>
+            <xs:element name="query" minOccurs="0" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="facetDTO">
+        <xs:sequence>
+            <xs:element name="entryCount" type="xs:int"/>
+            <xs:element name="optionPattern" type="xs:string"/>
+            <xs:element name="entries" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" name="entry" maxOccurs="unbounded" minOccurs="0" type="tns:facetEntryDTO"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="type" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="facetEntryDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="entryCount" type="xs:int"/>
+                    <xs:element name="option" type="xs:string"/>
+                    <xs:element name="label" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="fontFamilyDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="printTypes" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="printType" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="fonts" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:font" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="deprecated" minOccurs="0" type="xs:boolean"/>
+                </xs:sequence>
+                <xs:attribute name="weight" type="xs:double"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="fontDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="weight" type="tns:fontWeight"/>
+                    <xs:element name="style" type="tns:fontStyle"/>
+                    <xs:element name="minimalSize" type="xs:double"/>
+                    <xs:element name="resources" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:resource" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="productTypeStockDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:stock" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="productTypeStockDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element ref="tns:fulfiller" minOccurs="0"/>
+                    <xs:element name="appearance" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="size" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="storage" minOccurs="0" type="xs:string"/>
+                    <xs:element name="aisle" minOccurs="0" type="xs:string"/>
+                    <xs:element name="shelve" minOccurs="0" type="xs:string"/>
+                    <xs:element name="rack" minOccurs="0" type="xs:string"/>
+                    <xs:element name="quantity" type="xs:long"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="request">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="payload" type="tns:payload"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="payload">
+        <xs:sequence>
+            <xs:any maxOccurs="unbounded" minOccurs="0" processContents="lax" namespace="##other"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="orderDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:order" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="orderDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="errors" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="error" maxOccurs="unbounded" minOccurs="0" type="tns:errorDTO"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="shop" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="businessUnit" minOccurs="0" type="xs:string"/>
+                    <xs:element name="orderItems" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:orderItem" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="transactions" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:transaction" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="correlation" type="tns:correlationOrderDTO"/>
+                    <xs:element name="payment" minOccurs="0" type="tns:paymentDTO"/>
+                    <xs:element name="shipping" type="tns:shippingDTO"/>
+                    <xs:element name="billing" minOccurs="0" type="tns:billingDTO"/>
+                    <xs:element name="handlingGross" minOccurs="0" type="tns:price"/>
+                    <xs:element name="couponBasketReduction" minOccurs="0" type="tns:price"/>
+                    <xs:element name="bonus" minOccurs="0" type="tns:price"/>
+                    <xs:element name="discountGross" minOccurs="0" type="tns:price"/>
+                    <xs:element name="externalInvoiceData" minOccurs="0" type="tns:externalInvoiceData"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="errorDTO">
+        <xs:sequence>
+            <xs:element name="messages" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="message" maxOccurs="unbounded" minOccurs="0" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="stackTraces" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="stackTrace" maxOccurs="unbounded" minOccurs="0" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="correlationOrderDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="partner" minOccurs="0" type="tns:correlationPartnerOrderDTO"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="correlationPartnerOrderDTO">
+        <xs:sequence>
+            <xs:element name="id" minOccurs="0" type="xs:string"/>
+            <xs:element name="orderId" minOccurs="0" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="paymentDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="type" minOccurs="0" type="tns:paymentType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="shippingDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="shippingType" minOccurs="0" type="tns:reference"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="shippingCountry" minOccurs="0" type="tns:reference"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:address" minOccurs="0"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="price" minOccurs="0" type="tns:price"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="couponShippingReduction" minOccurs="0" type="tns:price"/>
+            <xs:element name="parcelDeliveries" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" name="parcelDelivery" maxOccurs="unbounded" minOccurs="0" type="tns:parcelDeliveryDTO"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="addressDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="company" minOccurs="0" type="xs:string"/>
+                    <xs:element name="person" minOccurs="0" type="tns:personDTO"/>
+                    <xs:element name="street" minOccurs="0" type="xs:string"/>
+                    <xs:element name="houseNumber" minOccurs="0" type="xs:string"/>
+                    <xs:element name="streetAnnex" minOccurs="0" type="xs:string"/>
+                    <xs:element name="city" minOccurs="0" type="xs:string"/>
+                    <xs:element name="state" minOccurs="0" type="tns:isoCodeDTO"/>
+                    <xs:element name="country" minOccurs="0" type="tns:isoCodeDTO"/>
+                    <xs:element name="zipCode" minOccurs="0" type="xs:string"/>
+                    <xs:element name="email" minOccurs="0" type="xs:string"/>
+                    <xs:element name="phone" minOccurs="0" type="xs:string"/>
+                    <xs:element name="fax" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+                <xs:attribute name="type" type="tns:addressType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="personDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="salutation" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="firstName" minOccurs="0" type="xs:string"/>
+                    <xs:element name="lastName" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="isoCodeDTO">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="code" use="required" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="parcelDeliveryDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="parcels" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="parcel" maxOccurs="unbounded" minOccurs="0" type="tns:parcelDTO"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="parcelDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="shippingType" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="trackingCode" minOccurs="0" type="xs:string"/>
+                    <xs:element name="trackingLink" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="shipped" minOccurs="0" type="xs:dateTime"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="billingDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:address" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="externalInvoiceData">
+        <xs:sequence>
+            <xs:element name="url" minOccurs="0" type="xs:string"/>
+            <xs:element name="total" minOccurs="0" type="xs:decimal"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="currency" minOccurs="0" type="tns:reference"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="articleDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="description" minOccurs="0" type="xs:string"/>
+                    <xs:element name="tags" minOccurs="0" type="xs:string"/>
+                    <xs:element name="safeSearch" minOccurs="0" type="tns:safeSearch"/>
+                    <xs:element ref="tns:price"/>
+                    <xs:element name="commission" minOccurs="0" type="tns:elementPrice"/>
+                    <xs:element name="shop" type="tns:reference"/>
+                    <xs:element ref="tns:product"/>
+                    <xs:element name="articleCategories" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="articleCategory" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="relatedArticles" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="relatedArticle" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="resources" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:resource" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="tns:relatedContent" minOccurs="0"/>
+                </xs:sequence>
+                <xs:attribute name="weight" type="xs:double"/>
+                <xs:attribute name="isDuplicate" type="xs:boolean"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="relatedContentDTO">
+        <xs:sequence>
+            <xs:element name="relatedSearchGroups" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:relatedSearchGroup" maxOccurs="unbounded" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="relatedSearchGroupDTO">
+        <xs:sequence>
+            <xs:element name="label" minOccurs="0" type="xs:string"/>
+            <xs:element name="relatedSearches" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:relatedSearch" maxOccurs="unbounded" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute xmlns:tns="http://api.spreadshirt.net" name="type" type="tns:relatedSearchGroupType"/>
+    </xs:complexType>
+    <xs:complexType name="deliveryDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="shipping" minOccurs="0" type="tns:deliveryShippingDTO"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="billing" minOccurs="0" type="tns:deliveryBillingDTO"/>
+            <xs:element name="giftWrappingMessage" minOccurs="0" type="xs:string"/>
+            <xs:element name="useGiftWrapping" minOccurs="0" type="xs:boolean"/>
+            <xs:element name="phone" minOccurs="0" type="xs:string"/>
+            <xs:element name="vatIdApprovedEUCompany" type="xs:boolean"/>
+            <xs:element name="euShippingAddress" type="xs:boolean"/>
+            <xs:element name="euBillingAddress" type="xs:boolean"/>
+            <xs:element name="orderReferenceToken" minOccurs="0" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="deliveryShippingDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="type" minOccurs="0" type="tns:reference"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="address" minOccurs="0" type="tns:basicAddressDTO"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="basicAddressDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="company" minOccurs="0" type="xs:string"/>
+                    <xs:element name="person" minOccurs="0" type="tns:personDTO"/>
+                    <xs:element name="street" minOccurs="0" type="xs:string"/>
+                    <xs:element name="houseNumber" minOccurs="0" type="xs:string"/>
+                    <xs:element name="streetAnnex" minOccurs="0" type="xs:string"/>
+                    <xs:element name="city" minOccurs="0" type="xs:string"/>
+                    <xs:element name="state" minOccurs="0" type="tns:isoCodeDTO"/>
+                    <xs:element name="country" minOccurs="0" type="tns:isoCodeDTO"/>
+                    <xs:element name="zipCode" minOccurs="0" type="xs:string"/>
+                    <xs:element name="vatId" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+                <xs:attribute name="type" type="tns:addressType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="deliveryBillingDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="address" minOccurs="0" type="tns:basicAddressDTO"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="addressBookAddressDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:basicAddressDTO">
+                <xs:sequence/>
+                <xs:attribute name="billingAddress" type="xs:boolean"/>
+                <xs:attribute name="shippingAddress" type="xs:boolean"/>
+                <xs:attribute name="defaultBillingAddress" type="xs:boolean"/>
+                <xs:attribute name="defaultShippingAddress" type="xs:boolean"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="orderItemDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:orderItem" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="productTypeDepartmentDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="categories" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="category" maxOccurs="unbounded" minOccurs="0" type="tns:productTypeCategoryDTO"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="weight" type="xs:double"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="productTypeCategoryDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="nameSingular" type="xs:string"/>
+                    <xs:element name="productTypes" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="productType" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="orderAdjustmentDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="order" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="fulfillmentState" minOccurs="0" type="tns:fulfillmentState"/>
+                    <xs:element name="orderItemAdjustments" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:orderItemAdjustment" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="orderItemAdjustmentDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="orderItem" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="fulfillmentState" minOccurs="0" type="tns:fulfillmentState"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="shippingCountryDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:shippingCountry" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="printTypeDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:printType" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="shopDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:shop" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="shopDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="descriptionName" minOccurs="0" type="xs:string"/>
+                    <xs:element name="description" minOccurs="0" type="xs:string"/>
+                    <xs:element name="type" minOccurs="0" type="xs:string"/>
+                    <xs:element name="user" type="tns:reference"/>
+                    <xs:element name="country" type="tns:reference"/>
+                    <xs:element name="language" type="tns:reference"/>
+                    <xs:element name="currency" type="tns:reference"/>
+                    <xs:element name="address" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="passwordRestricted" minOccurs="0" type="xs:boolean"/>
+                    <xs:element name="hidden" minOccurs="0" type="xs:boolean"/>
+                    <xs:element name="mandator" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="shippingUseCase" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="defaultShippingType" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="discountSupported" minOccurs="0" type="xs:boolean"/>
+                    <xs:element name="discountScale" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="productTypes" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="printTypes" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="fontFamilies" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="productTypeDepartments" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="shippingTypes" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="designCategories" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="designs" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="articleCategories" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="articles" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="products" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="applications" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="currencies" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="languages" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="countries" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="baskets" minOccurs="0" type="tns:reference"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="currencyDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="plain" type="xs:string"/>
+                    <xs:element name="isoCode" type="xs:string"/>
+                    <xs:element name="symbol" type="xs:string"/>
+                    <xs:element name="decimalCount" type="xs:int"/>
+                    <xs:element name="pattern" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="checkoutFinalizationDTO">
+        <xs:sequence>
+            <xs:element name="returnUrl" minOccurs="0" type="xs:string"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="paymentType" minOccurs="0" type="tns:reference"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="payment" minOccurs="0" type="tns:stringListElements"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="stringListElements">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="list" maxOccurs="unbounded" minOccurs="0" type="tns:stringListElement"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="stringListElement">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="key" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="designDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="description" minOccurs="0" type="xs:string"/>
+                    <xs:element name="fileName" minOccurs="0" type="xs:string"/>
+                    <xs:element name="fileExtension" minOccurs="0" type="xs:string"/>
+                    <xs:element name="translations" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="translation" maxOccurs="unbounded" minOccurs="0" type="tns:translation"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="sourceUrl" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="tags" minOccurs="0" type="xs:string"/>
+                    <xs:element name="user" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="creator" minOccurs="0" type="xs:string"/>
+                    <xs:element name="safeSearch" minOccurs="0" type="tns:safeSearch"/>
+                    <xs:element name="designServiceState" minOccurs="0" type="tns:designServiceState"/>
+                    <xs:element name="labels" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="label" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="restrictions" minOccurs="0" type="tns:designRestrictionsDTO"/>
+                    <xs:element name="size" minOccurs="0" type="tns:dimension"/>
+                    <xs:element name="colors" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="color" maxOccurs="unbounded" minOccurs="0" type="tns:designColorDTO"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="backgroundColor" minOccurs="0" type="xs:string"/>
+                    <xs:element name="printTypes" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="printType" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="designCategories" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="designCategory" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="tns:price" minOccurs="0"/>
+                    <xs:element name="resources" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:resource" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="imageModified" minOccurs="0" type="xs:dateTime"/>
+                    <xs:element name="format" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+                <xs:attribute name="weight" type="xs:double"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="translation">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="locale" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="description" minOccurs="0" type="xs:string"/>
+                    <xs:element name="tags" minOccurs="0" type="xs:string"/>
+                    <xs:element name="userContent" minOccurs="0" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="designRestrictionsDTO">
+        <xs:sequence>
+            <xs:element name="fixedColors" type="xs:boolean"/>
+            <xs:element name="colorCount" type="xs:int"/>
+            <xs:element name="ownText" type="xs:boolean"/>
+            <xs:element name="obligatory" type="xs:boolean"/>
+            <xs:element name="movable" type="xs:boolean"/>
+            <xs:element name="targetView" type="xs:int"/>
+            <xs:element name="minimumScale" type="xs:int"/>
+            <xs:element name="visible" type="xs:boolean"/>
+            <xs:element name="inverted" type="xs:boolean"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="denyOtherText" type="tns:denyOtherText"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="denyOtherDesigns" type="tns:denyOtherDesigns"/>
+            <xs:element name="allowScale" type="xs:boolean"/>
+            <xs:element name="allowFlip" type="xs:boolean"/>
+            <xs:element name="allowRotate" type="xs:boolean"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="allowedShops" minOccurs="0" type="tns:allowedShops"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="designColorDTO">
+        <xs:sequence>
+            <xs:element name="default" type="xs:string"/>
+            <xs:element name="origin" type="xs:string"/>
+            <xs:element name="resources" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:resource" maxOccurs="unbounded" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="layer" use="required" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="productTypeDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:productType" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="messageDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="properties" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:property" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="type" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="messagePropertyDTO">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="key" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="combinedBasketDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element ref="tns:basket" minOccurs="0"/>
+                    <xs:element ref="tns:shop" minOccurs="0"/>
+                    <xs:element ref="tns:currency" minOccurs="0"/>
+                    <xs:element ref="tns:shippingTypes" minOccurs="0"/>
+                    <xs:element ref="tns:shippingOptions" minOccurs="0"/>
+                    <xs:element ref="tns:productTypes" minOccurs="0"/>
+                    <xs:element ref="tns:products" minOccurs="0"/>
+                    <xs:element ref="tns:articles" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="basketDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="token" minOccurs="0" type="xs:string"/>
+                    <xs:element name="shop" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="user" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="currency" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="language" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="country" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="basketItems" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:basketItem" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="links" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:link" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="shipping" minOccurs="0" type="tns:shippingPriceDTO"/>
+                    <xs:element name="discounts" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="discount" maxOccurs="unbounded" minOccurs="0" type="tns:itemDiscount"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="shippingOptions" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="shippingOptions" maxOccurs="unbounded" minOccurs="0" nillable="true" type="tns:shippingOptionBasketDTO"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="priceItems" minOccurs="0" type="tns:price"/>
+                    <xs:element name="priceTotal" minOccurs="0" type="tns:price"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="basketItemDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="description" minOccurs="0" type="xs:string"/>
+                    <xs:element name="quantity" minOccurs="0" type="xs:int"/>
+                    <xs:element name="element" minOccurs="0" type="tns:elementDTO"/>
+                    <xs:element name="links" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:link" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="shop" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="origin" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="discounts" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="discount" maxOccurs="unbounded" minOccurs="0" type="tns:itemDiscount"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="priceItem" minOccurs="0" type="tns:price"/>
+                    <xs:element name="price" minOccurs="0" type="tns:price"/>
+                    <xs:element name="shippingFactor" minOccurs="0" type="xs:double"/>
+                    <xs:element name="giftWrappingSupported" minOccurs="0" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="linkDTO">
+        <xs:sequence/>
+        <xs:attribute xmlns:tns="http://api.spreadshirt.net" name="type" type="tns:linkType"/>
+        <xs:attribute xmlns:xlink="http://www.w3.org/1999/xlink" ref="xlink:href"/>
+    </xs:complexType>
+    <xs:complexType name="itemDiscount">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="discountScale" minOccurs="0" type="tns:reference"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="currentDiscount" minOccurs="0" type="tns:reference"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="nextDiscount" minOccurs="0" type="tns:reference"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="price" minOccurs="0" type="tns:price"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="shippingPriceDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="price" minOccurs="0" type="tns:price"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="shippingOptionBasketDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="price" minOccurs="0" type="tns:price"/>
+                    <xs:element name="giftWrappingMessage" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+                <xs:attribute name="type" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="shippingTypeDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:shippingType" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="shippingOptionDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:shippingOption" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="shippingOptionDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="optionCosts" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:optionCost" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="type" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="optionCostDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="shippingCountry" minOccurs="0" type="tns:reference"/>
+                    <xs:element ref="tns:price" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="productDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:product" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="articleDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:article" maxOccurs="unbounded" minOccurs="0"/>
+                    <xs:element ref="tns:relatedContent" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="designDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:design" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="fulfillerDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:fulfiller" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="discountScaleDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="discounts" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:discount" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="discountDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="valueRange" minOccurs="0" type="tns:valueRangeDTO"/>
+                    <xs:element name="credit" minOccurs="0" type="tns:creditDTO"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="valueRangeDTO">
+        <xs:sequence>
+            <xs:element name="from" minOccurs="0" type="xs:decimal"/>
+            <xs:element name="to" minOccurs="0" type="xs:decimal"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="unit" minOccurs="0" type="tns:unitDTO"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="unitDTO">
+        <xs:sequence/>
+        <xs:attribute name="type" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="creditDTO">
+        <xs:sequence>
+            <xs:element name="value" minOccurs="0" type="xs:decimal"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="unit" minOccurs="0" type="tns:unitDTO"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="productTypeStockStateDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element name="stockStates" maxOccurs="unbounded" minOccurs="0" type="tns:productTypeStockStateDTO"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="applicationDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="properties" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="property" maxOccurs="unbounded" minOccurs="0" type="tns:applicationPropertyDTO"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="applicationPropertyDTO">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="key" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="emptyDTO">
+        <xs:sequence/>
+    </xs:complexType>
+    <xs:complexType name="localeDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:locale" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="addressBookAddressDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:addressBookAddress" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="shopAddressDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:extendedAddressDTO">
+                <xs:sequence>
+                    <xs:element name="homepage" minOccurs="0" type="xs:string"/>
+                    <xs:element name="tradeRegister" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+                <xs:attribute name="isPartnerAddress" use="required" type="xs:boolean"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="extendedAddressDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:basicAddressDTO">
+                <xs:sequence>
+                    <xs:element name="email" minOccurs="0" type="xs:string"/>
+                    <xs:element name="phone" minOccurs="0" type="xs:string"/>
+                    <xs:element name="fax" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="productTypeDepartmentDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:productTypeDepartment" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="fontFamilyDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:fontFamily" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="productTypePackagingMeasureDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:packagingMeasure" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="productTypePackagingMeasureDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element ref="tns:size" minOccurs="0"/>
+                    <xs:element name="weight" minOccurs="0" type="xs:double"/>
+                    <xs:element name="height" minOccurs="0" type="xs:double"/>
+                    <xs:element name="width" minOccurs="0" type="xs:double"/>
+                    <xs:element name="length" minOccurs="0" type="xs:double"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="languageDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="isoCode" type="xs:string"/>
+                    <xs:element name="name" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="clientSettingsDTO">
+        <xs:sequence>
+            <xs:element name="browserLocale" minOccurs="0" type="xs:string"/>
+            <xs:element name="applicationLocale" minOccurs="0" type="xs:string"/>
+            <xs:element name="platformLocale" minOccurs="0" type="xs:string"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="language" minOccurs="0" type="tns:reference"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="country" minOccurs="0" type="tns:reference"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="printColorDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:printColor" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="articleReferencesDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="duplicates" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="article" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="noDuplicates" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="article" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="applicationDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:application" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="designCategoryDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:designCategory" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="designCategoryDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="entryCount" minOccurs="0" type="xs:int"/>
+                    <xs:element name="designs" type="tns:reference"/>
+                    <xs:element name="designCategories" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:designCategory" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="weight" use="required" type="xs:double"/>
+                <xs:attribute name="type" use="required" type="tns:type"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="designRenderDataDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:design" minOccurs="0"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="designMetaData" minOccurs="0" type="tns:designMetaDataDTO"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="designMetaDataDTO">
+        <xs:sequence>
+            <xs:element name="id" minOccurs="0" type="xs:string"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="viewBox" minOccurs="0" type="tns:designViewBoxDTO"/>
+            <xs:element name="shapes" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" name="shape" maxOccurs="unbounded" minOccurs="0" type="tns:designShapeDTO"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="designViewBoxDTO">
+        <xs:sequence>
+            <xs:element name="x" type="xs:double"/>
+            <xs:element name="y" type="xs:double"/>
+            <xs:element name="width" type="xs:double"/>
+            <xs:element name="height" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="designShapeDTO">
+        <xs:sequence>
+            <xs:element name="type" minOccurs="0" type="xs:string"/>
+            <xs:element name="path" minOccurs="0" type="xs:string"/>
+            <xs:element name="weight" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="configurationRenderDataDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:productRenderDataDTO">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="productRenderDataDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:product" minOccurs="0"/>
+            <xs:element name="designs" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" ref="tns:design" maxOccurs="unbounded" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="designMetaDatas" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" name="designMetaData" maxOccurs="unbounded" minOccurs="0" type="tns:designMetaDataDTO"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="configurationLastModifiedDTO">
+        <xs:sequence>
+            <xs:element name="imageModified" minOccurs="0" type="xs:dateTime"/>
+            <xs:element name="modified" minOccurs="0" type="xs:dateTime"/>
+        </xs:sequence>
+        <xs:attribute name="lifeCycleState" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="response">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="status" minOccurs="0" type="tns:status"/>
+            <xs:element name="headers" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" name="header" maxOccurs="unbounded" minOccurs="0" type="tns:header"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="payload" minOccurs="0" type="tns:payload"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="status">
+        <xs:sequence>
+            <xs:element name="code" minOccurs="0" type="xs:string"/>
+            <xs:element name="message" minOccurs="0" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="header">
+        <xs:sequence>
+            <xs:element name="key" minOccurs="0" type="xs:string"/>
+            <xs:element name="value" minOccurs="0" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="articleCategoryDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:articleCategory" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="articleCategoryDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="entryCount" minOccurs="0" type="xs:int"/>
+                    <xs:element name="articles" type="tns:reference"/>
+                    <xs:element name="articleCategories" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:articleCategory" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="weight" use="required" type="xs:double"/>
+                <xs:attribute name="type" use="required" type="tns:articleCategoryType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="languageDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:language" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="designLastModifiedDTO">
+        <xs:sequence>
+            <xs:element name="imageModified" minOccurs="0" type="xs:dateTime"/>
+            <xs:element name="modified" minOccurs="0" type="xs:dateTime"/>
+        </xs:sequence>
+        <xs:attribute name="lifeCycleState" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="discountScaleDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:discountScale" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="productLastModifiedDTO">
+        <xs:sequence>
+            <xs:element name="imageModified" minOccurs="0" type="xs:dateTime"/>
+            <xs:element name="modified" minOccurs="0" type="xs:dateTime"/>
+        </xs:sequence>
+        <xs:attribute name="lifeCycleState" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="currencyDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:currency" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="userDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="identity" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="email" minOccurs="0" type="xs:string"/>
+                    <xs:element name="guest" minOccurs="0" type="xs:boolean"/>
+                    <xs:element name="partnerType" minOccurs="0" type="tns:partnerType"/>
+                    <xs:element name="description" minOccurs="0" type="xs:string"/>
+                    <xs:element name="interests" minOccurs="0" type="xs:string"/>
+                    <xs:element name="userWebSites" minOccurs="0">
+                        <xs:simpleType>
+                            <xs:list itemType="xs:string"/>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="memberSince" type="xs:string"/>
+                    <xs:element name="country" type="tns:reference"/>
+                    <xs:element name="language" type="tns:reference"/>
+                    <xs:element name="currency" type="tns:reference"/>
+                    <xs:element ref="tns:newsletter" minOccurs="0"/>
+                    <xs:element ref="tns:address" minOccurs="0"/>
+                    <xs:element name="acceptTermsAndConditions" minOccurs="0" type="xs:boolean"/>
+                    <xs:element name="productTypes" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="printTypes" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="fontFamilies" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="productTypeDepartments" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="shippingTypes" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="designCategories" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="designs" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="products" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="shops" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="apiKeys" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="currencies" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="languages" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="countries" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="addresses" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="resources" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:resource" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="userNewsletterDTO">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="shop" minOccurs="0" type="tns:reference"/>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="lists" minOccurs="0" type="tns:listElements"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="listElements">
+        <xs:sequence>
+            <xs:element xmlns:tns="http://api.spreadshirt.net" name="list" maxOccurs="unbounded" minOccurs="0" type="tns:listElement"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="listElement">
+        <xs:simpleContent>
+            <xs:extension base="xs:boolean">
+                <xs:attribute name="key" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="countryDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:country" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="basketItemDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:basketItem" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="referenceList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:reference" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="autoMarkQueueDTO">
+        <xs:sequence>
+            <xs:element name="shopIds" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:tns="http://api.spreadshirt.net" name="shopId" maxOccurs="unbounded" minOccurs="0" type="tns:autoMarkQueueItemDTO"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="autoMarkQueueItemDTO">
+        <xs:sequence>
+            <xs:element name="index" type="xs:int"/>
+            <xs:element name="shopId" minOccurs="0" type="xs:string"/>
+            <xs:element name="attemps" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType final="extension restriction" name="paymentTypeDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:paymentType" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="paymentTypeDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="methodCode" minOccurs="0" type="xs:string"/>
+                    <xs:element name="categoryCode" minOccurs="0" type="xs:string"/>
+                    <xs:element name="grossLowerLimit" minOccurs="0" type="xs:decimal"/>
+                    <xs:element name="grossUpperLimit" minOccurs="0" type="xs:decimal"/>
+                </xs:sequence>
+                <xs:attribute name="weight" use="required" type="xs:double"/>
+                <xs:attribute name="supported" use="required" type="xs:boolean"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="orderAdjustmentDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:orderAdjustment" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="labeledObjectDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:labeledObject" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="labeledObjectDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="object" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="objectType" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="objectLabels" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:objectLabel" maxOccurs="unbounded" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="objectLabelDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="object" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="objectType" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="user" minOccurs="0" type="tns:reference"/>
+                    <xs:element ref="tns:label" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="labelDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="labelType" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="user" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="translations" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="translation" maxOccurs="unbounded" minOccurs="0" type="tns:labelTranslation"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="labelTranslation">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="locale" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="value" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="labelDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:label" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="objectLabelDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:objectLabel" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="labelTypeDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="labelTypeDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:labelType" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="objectTypeDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="objectTypeDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:objectType" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="apiKeyDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="description" minOccurs="0" type="xs:string"/>
+                    <xs:element name="user" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="key" minOccurs="0" type="xs:string"/>
+                    <xs:element name="secret" minOccurs="0" type="xs:string"/>
+                    <xs:element name="callLimit" minOccurs="0" type="xs:int"/>
+                    <xs:element name="apiFeatures" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="apiFeature" maxOccurs="unbounded" minOccurs="0" type="tns:reference"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="state" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="apiKeyDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:apiKey" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="apiFeatureDTOList">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:abstractList">
+                <xs:sequence>
+                    <xs:element ref="tns:apiFeature" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="apiFeatureDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="name" minOccurs="0" type="xs:string"/>
+                    <xs:element name="description" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="identityDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="email" minOccurs="0" type="xs:string"/>
+                    <xs:element name="username" minOccurs="0" type="xs:string"/>
+                    <xs:element name="realname" minOccurs="0" type="xs:string"/>
+                    <xs:element name="guest" minOccurs="0" type="xs:boolean"/>
+                    <xs:element name="password" minOccurs="0" type="xs:string"/>
+                    <xs:element name="language" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="country" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="rememberMe" minOccurs="0" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="loginDTO">
+        <xs:sequence>
+            <xs:element name="username" minOccurs="0" type="xs:string"/>
+            <xs:element name="password" minOccurs="0" type="xs:string"/>
+            <xs:element name="identityId" minOccurs="0" type="xs:string"/>
+            <xs:element name="rememberMe" minOccurs="0" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="sessionDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="identity" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="user" minOccurs="0" type="tns:reference"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="registrationResultDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="identity" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="user" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="session" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="shop" minOccurs="0" type="tns:reference"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="registrationDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="username" minOccurs="0" type="xs:string"/>
+                    <xs:element name="realname" minOccurs="0" type="xs:string"/>
+                    <xs:element name="password" minOccurs="0" type="xs:string"/>
+                    <xs:element name="email" minOccurs="0" type="xs:string"/>
+                    <xs:element name="guest" minOccurs="0" type="xs:boolean"/>
+                    <xs:element name="partnerType" minOccurs="0" type="xs:string"/>
+                    <xs:element name="language" minOccurs="0" type="tns:reference"/>
+                    <xs:element name="country" minOccurs="0" type="tns:reference"/>
+                    <xs:element ref="tns:newsletter" minOccurs="0"/>
+                    <xs:element name="acceptTermsAndConditions" minOccurs="0" type="xs:boolean"/>
+                    <xs:element ref="tns:address" minOccurs="0"/>
+                    <xs:element name="rememberMe" minOccurs="0" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="batchDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="operations" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element ref="tns:operation" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="operationDTO">
+        <xs:complexContent>
+            <xs:extension xmlns:tns="http://api.spreadshirt.net" base="tns:dto">
+                <xs:sequence>
+                    <xs:element name="method" type="xs:string"/>
+                    <xs:element name="url" type="xs:string"/>
+                    <xs:element name="headers" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+<xs:element name="header" maxOccurs="unbounded" minOccurs="0" type="tns:header"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="body" minOccurs="0" type="xs:string"/>
+                    <xs:element name="executed" minOccurs="0" type="xs:boolean"/>
+                    <xs:element name="status" minOccurs="0" type="tns:status"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:simpleType name="transformationDTO">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+    <xs:simpleType name="fulfillmentState">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="RECEIVED"/>
+            <xs:enumeration value="CREATED"/>
+            <xs:enumeration value="ACCEPTED"/>
+            <xs:enumeration value="IN_PROGRESS"/>
+            <xs:enumeration value="WAITING_FOR_CUSTOMER"/>
+            <xs:enumeration value="SHIPPED"/>
+            <xs:enumeration value="RETURNED"/>
+            <xs:enumeration value="CANCELED"/>
+            <xs:enumeration value="ERROR"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="attachmentType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="sprd:design"/>
+            <xs:enumeration value="sprd:product"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="resourceType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="image"/>
+            <xs:enumeration value="preview"/>
+            <xs:enumeration value="montage"/>
+            <xs:enumeration value="product"/>
+            <xs:enumeration value="composition"/>
+            <xs:enumeration value="size"/>
+            <xs:enumeration value="detail"/>
+            <xs:enumeration value="user"/>
+            <xs:enumeration value="banner"/>
+            <xs:enumeration value="error"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="unit">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="mm"/>
+            <xs:enumeration value="px"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="washingInstructionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="bleaching"/>
+            <xs:enumeration value="washing"/>
+            <xs:enumeration value="drying"/>
+            <xs:enumeration value="ironing"/>
+            <xs:enumeration value="drycleaning"/>
+            <xs:enumeration value="tumble"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="perspective">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="front"/>
+            <xs:enumeration value="back"/>
+            <xs:enumeration value="right"/>
+            <xs:enumeration value="left"/>
+            <xs:enumeration value="hood_right"/>
+            <xs:enumeration value="hood_left"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="configurationType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="text"/>
+            <xs:enumeration value="design"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="fontWeight">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="normal"/>
+            <xs:enumeration value="bold"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="fontStyle">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="normal"/>
+            <xs:enumeration value="italic"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="paymentType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="EXTERNAL_FULFILLMENT"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="addressType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="private"/>
+            <xs:enumeration value="packstation"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="safeSearch">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="strict"/>
+            <xs:enumeration value="moderate"/>
+            <xs:enumeration value="off"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="relatedSearchGroupType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SIMILAR_TAGS"/>
+            <xs:enumeration value="SIMILAR_APPAREL"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="designServiceState">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="noImageUploaded"/>
+            <xs:enumeration value="toBeApproved"/>
+            <xs:enumeration value="approved"/>
+            <xs:enumeration value="rejected"/>
+            <xs:enumeration value="toBeApprovedByUser"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="denyOtherText">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="no"/>
+            <xs:enumeration value="onPrintArea"/>
+            <xs:enumeration value="onProduct"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="denyOtherDesigns">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="no"/>
+            <xs:enumeration value="onPrintArea"/>
+            <xs:enumeration value="onProduct"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="allowedShops">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="all"/>
+            <xs:enumeration value="onlyMP"/>
+            <xs:enumeration value="onlyD2C"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="linkType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="continueShopping"/>
+            <xs:enumeration value="edit"/>
+            <xs:enumeration value="platformCheckout"/>
+            <xs:enumeration value="shopCheckout"/>
+            <xs:enumeration value="defaultCheckout"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MY_DESIGNS"/>
+            <xs:enumeration value="SHOP_DEFAULT"/>
+            <xs:enumeration value="UPLOADED"/>
+            <xs:enumeration value="GRABBED"/>
+            <xs:enumeration value="HISTORY"/>
+            <xs:enumeration value="MARKETPLACE"/>
+            <xs:enumeration value="SHOP"/>
+            <xs:enumeration value="BESTSELLER"/>
+            <xs:enumeration value="OWN"/>
+            <xs:enumeration value="SHOP_CUSTOM"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="articleCategoryType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MY_ARTICLES"/>
+            <xs:enumeration value="SHOP_DEFAULT"/>
+            <xs:enumeration value="HISTORY"/>
+            <xs:enumeration value="MARKETPLACE"/>
+            <xs:enumeration value="SHOP"/>
+            <xs:enumeration value="BESTSELLER"/>
+            <xs:enumeration value="OWN"/>
+            <xs:enumeration value="SHOP_CUSTOM"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="partnerType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="none"/>
+            <xs:enumeration value="standard"/>
+            <xs:enumeration value="premium"/>
+            <xs:enumeration value="spread"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
