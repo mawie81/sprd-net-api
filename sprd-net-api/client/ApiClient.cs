@@ -15,16 +15,20 @@ namespace sprd_net_api.client
     {
         private CookieContainer _cookieContainer;
         private HttpClientHandler _handler;
+        private bool _isInitialized;
+        private static ApiClient _instance = new ApiClient();
+
+        private ApiClient()
+        {
+            
+        }
+
+        public static ApiClient Instance { get { return _instance;  } }
 
         private HttpClientHandler Handler
         {
             get
             {
-                if (_handler == null)
-                {
-                    _cookieContainer = new CookieContainer();
-                    _handler = new HttpClientHandler { CookieContainer = _cookieContainer, UseCookies = true, AllowAutoRedirect = false };
-                }
                 return _handler;
             }
         }
@@ -43,6 +47,16 @@ namespace sprd_net_api.client
             var builder = new UriBuilder(path);
             builder.Query += "mediaType=json&locale=de_DE";
             return builder.Uri;
+        }
+
+        public bool Init(HttpClientHandler handler)
+        {
+            _handler = handler;
+            _handler.CookieContainer = new CookieContainer();
+            _handler.UseCookies = true;
+            
+            _isInitialized = true;
+            return _isInitialized;
         }
 
         public async Task<T> Get<T>(string path) where T : class

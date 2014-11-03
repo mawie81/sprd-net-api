@@ -13,8 +13,7 @@ namespace sprd_net_api.user
 
         public void CreateSession(string username, string password)
         {
-            var api = new ApiClient();
-            api.Post(SESSION_PATH, new loginDTO() {username = username, password = password}).Wait();
+            ApiClient.Instance.Post(SESSION_PATH, new loginDTO() {username = username, password = password}).Wait();
         }
     }
 }
